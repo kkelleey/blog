@@ -9,11 +9,12 @@
     config/locales/en.yml. For more see:
     https://github.com/calebthompson/title#usage
   %>
-  <title><%= title %></title>
+  <title>Along the Gringo Trail</title>
   <%= stylesheet_link_tag :application, media: "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= body_class %>">
+  <%= render "navbar" %>
   <%= render "flashes" -%>
   <%= yield %>
   <%= render "javascript" %>

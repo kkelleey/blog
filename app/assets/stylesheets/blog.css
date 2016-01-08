@@ -1,0 +1,24 @@
+header.navigation.blue, header.navigation.blue ul.submenu li a{
+  background-color: #3964A2;
+  border-bottom: #023277;
+}
+.content{
+  padding: 10px;
+  background-color: #DBE3EE
+}
+.posts-container{
+  background-color: #FFF;
+  padding: 10px;
+}
+.post-div{
+  margin-top: 10px;
+}
+.post-title{
+  font-size: 2em;
+  margin-bottom: 0.2em;
+}
+.post-date{
+  font-size: 90%;
+  color: grey;
+}
+

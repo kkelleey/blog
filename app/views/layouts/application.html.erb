@@ -15,8 +15,10 @@
 </head>
 <body class="<%= body_class %>">
   <%= render "navbar" %>
-  <%= render "flashes" -%>
-  <%= yield %>
+  <div class="content">
+    <%= render "flashes" -%>
+    <%= yield %>
+  </div>
   <%= render "javascript" %>
 </body>
 </html>

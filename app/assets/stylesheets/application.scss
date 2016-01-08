@@ -6,12 +6,21 @@
 @import "neat";
 @import "base/base";
 @import "refills/flashes";
+@import "blog";
+
+.posts-container{
+  @include outer-container;
+}
+.post-div{
+  @include span-columns(8);
+  @include shift(2);
+}
 
 header.navigation {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $action-color: #477DCA !default;
-  $dark-gray: #333 !default;
+  $dark-gray: #3964A2 !default;
   $large-screen: em(860) !default;
   $navigation-padding: 1em;
   $navigation-background: $dark-gray;

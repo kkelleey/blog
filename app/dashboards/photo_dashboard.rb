@@ -10,6 +10,7 @@ class PhotoDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     country_id: Field::Number,
+    country: Field::BelongsTo,
     image_file_name: Field::String,
     image_content_type: Field::String,
     image_file_size: Field::Number,
@@ -26,6 +27,7 @@ class PhotoDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :image_file_name,
+    :country,
     :created_at,
   ]
 

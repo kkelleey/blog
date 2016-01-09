@@ -11,15 +11,17 @@ module Admin
 
     def create
       country_id = params[:photo][:country_id]
-      params[:photo][:image].map do |photo|
-        Photo.create(photo_params(photo, country_id))
+      added_photos = 0
+      params[:photo][:image].each do |photo|
+        record = Photo.create(photo_params(photo, country_id))
+        if record.errors.any?
+          flash[:notice] = record.errors.full_messages.to_sentence
+        else
+          added_photos += 1
+        end
       end
-      flash[:notice] = "Photo has been added"
+      flash[:notice] = "#{added_photos} photos #{'has'.pluralize(added_photos)} been added"
       redirect_to admin_photos_url
-      # else
-      #   flash.now[:error] = @photo.errors.full_messages
-      #   redirect_to :back
-      # end
     end
 
     # Define a custom finder by overriding the `find_resource` method:

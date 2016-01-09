@@ -11,10 +11,7 @@ class PhotoDashboard < Administrate::BaseDashboard
     id: Field::Number,
     country_id: Field::Number,
     country: Field::BelongsTo,
-    image_file_name: Field::String,
-    image_content_type: Field::String,
-    image_file_size: Field::Number,
-    image_update_at: Field::DateTime,
+    image: PaperclipField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }
@@ -26,7 +23,7 @@ class PhotoDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :id,
-    :image_file_name,
+    :image,
     :country,
     :created_at,
   ]

@@ -10,13 +10,16 @@ module Admin
     # end
 
     def create
-      if @photo = Photo.create(photo_params)
-        flash.now[:success] = "Photo has been added"
-        redirect_to admin_photos_url
-      else
-        flash.now[:error] = @photo.errors.full_messages
-        redirect_to :back
+      country_id = params[:photo][:country_id]
+      params[:photo][:image].map do |photo|
+        Photo.create(photo_params(photo, country_id))
       end
+      flash[:notice] = "Photo has been added"
+      redirect_to admin_photos_url
+      # else
+      #   flash.now[:error] = @photo.errors.full_messages
+      #   redirect_to :back
+      # end
     end
 
     # Define a custom finder by overriding the `find_resource` method:
@@ -29,9 +32,8 @@ module Admin
 
     private
 
-    def photo_params
-      # params.permit(:utf8, :commit, :authenticity_token).require(:photo)
-      params.require(:photo).permit(:image)
+    def photo_params(photo, country_id)
+      { country_id: country_id, image: photo }
     end
 
   end

@@ -28,3 +28,17 @@ header.navigation.green a{
   border-radius: 20px;
   margin: 5px;
 }
+.photos-index .image{
+  position: relative;
+  display: inline-block;
+}
+.photos-index .image:not(:hover) h2{
+  display: none;
+}
+.photos-index .image:hover h2{
+  position: absolute;
+  top: 75%;
+  left: 5%;
+  width: 100%;
+  color: white;
+}

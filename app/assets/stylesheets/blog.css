@@ -1,6 +1,9 @@
-header.navigation.blue, header.navigation.blue ul.submenu li a{
-  background-color: #3964A2;
+header.navigation.green{
+  background-color: #66CAC4;
   border-bottom: #023277;
+}
+header.navigation.green a{
+  color: white;
 }
 .content{
   padding: 10px;

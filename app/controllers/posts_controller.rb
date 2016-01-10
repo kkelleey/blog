@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   def index
     @posts = Post.order(created_at: :desc).first(5)
-    @random_photos = Photo.random(4)
+    @tiles = Tile.generate_tiles(10)
   end
 
   # GET /posts/1

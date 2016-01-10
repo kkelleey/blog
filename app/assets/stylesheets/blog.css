@@ -4,7 +4,7 @@ header.navigation.blue, header.navigation.blue ul.submenu li a{
 }
 .content{
   padding: 10px;
-  background-color: #DBE3EE
+  background-color: #F6F7F9;
 }
 .posts-container{
   background-color: #FFF;
@@ -21,4 +21,7 @@ header.navigation.blue, header.navigation.blue ul.submenu li a{
   font-size: 90%;
   color: grey;
 }
-
+.photos-index img{
+  border-radius: 20px;
+  margin: 5px;
+}

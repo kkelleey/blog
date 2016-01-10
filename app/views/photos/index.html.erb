@@ -1,7 +1,3 @@
-<div class="flex-boxes">
-  <% @photos.each do |photo| %>
-    <div class="flex-box">
-      <%= image_tag photo.image %>
-    </div>
-  <% end %>
-</div>
+<% @photos.each do |photo| %>
+  <%= image_tag photo.image.url(:small) %>
+<% end %>

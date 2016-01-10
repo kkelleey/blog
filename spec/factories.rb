@@ -9,7 +9,7 @@ FactoryGirl.define do  factory :photo do
 password "MyString"
   end
   factory :post do
-    title "MyString"
+    sequence(:title) { |n| "Post #{n}" }
 text "MyText"
   end
 

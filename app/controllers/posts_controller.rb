@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = Post.all
+    @posts = Post.order(created_at: :desc).first(5)
     @random_photos = Photo.random(4)
   end
 

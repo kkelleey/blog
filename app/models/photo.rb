@@ -4,7 +4,7 @@ class Photo < ActiveRecord::Base
     styles: {
     thumb: "100x100#",
     small: "x250",
-    medium: "300x300" }
+    medium: "250x200#" }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   def self.random(number)

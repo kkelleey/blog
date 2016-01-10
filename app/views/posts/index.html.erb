@@ -1,8 +1,18 @@
 <p id="notice"><%= notice %></p>
 <div class="photo-container">
   <div class="photo-inner-container">
-    <% @random_photos.each do |photo| %>
-      <%= image_tag photo.image.url(:medium) %>
+    <div id="title-div" class="image" >
+      <h2> Along the Gringo Trail </h2>
+    </div>
+    <% @random_photos.each_with_index do |photo, index| %>
+      <% if index == 3 %>
+        <div class="image">
+          <%= image_tag '/assets/lugano.jpg' %>
+        </div>
+      <% end %>
+      <div class="image">
+        <%= image_tag photo.image.url(:medium) %>
+      </div>
     <% end %>
   </div>
 </div>

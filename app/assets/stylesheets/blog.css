@@ -42,3 +42,13 @@ header.navigation.green a{
   width: 100%;
   color: white;
 }
+.posts-index #title-div{
+  height: 200px;
+  width: 250px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 50px;
+  border-radius: 10px;
+  text-align: right;
+  padding: 11px;
+}

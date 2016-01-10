@@ -8,6 +8,23 @@
 @import "refills/flashes";
 @import "blog";
 
+.photo-container{
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+.photo-inner-container{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  img{
+    margin: 6px;
+    max-width: 100%;
+    border-radius: 20px;
+  }
+}
 .posts-container{
   @include outer-container;
 }
@@ -48,7 +65,6 @@
 
     .hero-copy {
       text-align: center;
-      
       h1 {
         color: $hero-color;
         font-size: 1.6em;

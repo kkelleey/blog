@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   def index
     @posts = Post.all
+    @random_photos = Photo.random(6)
   end
 
   # GET /posts/1

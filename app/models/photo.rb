@@ -6,4 +6,8 @@ class Photo < ActiveRecord::Base
     small: "x250",
     medium: "300x300" }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+
+  def self.random(number)
+    limit(number).order("RANDOM()")
+  end
 end

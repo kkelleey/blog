@@ -19,7 +19,7 @@ class Tile
     Country.all.map do |country|
       {
         src: country.logo.url(:medium),
-        href: Rails.application.routes.url_helpers.posts_path(country: country.id),
+        href: Rails.application.routes.url_helpers.posts_path(by_country: country.id),
         class: 'logo',
       }
     end

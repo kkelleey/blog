@@ -1,4 +1,9 @@
-FactoryGirl.define do  factory :photo do
+FactoryGirl.define do  factory :city do
+    latitude 1.5
+longitude 1.5
+country nil
+  end
+  factory :photo do
     country nil
   end
   factory :country do

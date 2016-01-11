@@ -13,6 +13,7 @@ class DashboardManifest
     :posts,
     :photos,
     :countries,
+    :cities,
   ]
 
   # `ROOT_DASHBOARD`

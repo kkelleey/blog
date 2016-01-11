@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160110221835) do
+ActiveRecord::Schema.define(version: 20160111013754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,7 +43,10 @@ ActiveRecord::Schema.define(version: 20160110221835) do
     t.text     "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "country_id"
   end
+
+  add_index "posts", ["country_id"], name: "index_posts_on_country_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -60,4 +63,5 @@ ActiveRecord::Schema.define(version: 20160110221835) do
   add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
 
   add_foreign_key "photos", "countries"
+  add_foreign_key "posts", "countries"
 end

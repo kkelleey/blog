@@ -24,10 +24,14 @@
     max-width: 100%;
     margin: 5px;
 
-    img{
+    a{
       border-radius: inherit;
-      height: 200px;
-      width: 250px;
+
+      img{
+        border-radius: inherit;
+        height: 200px;
+        width: 250px;
+      }
     }
   }
 }

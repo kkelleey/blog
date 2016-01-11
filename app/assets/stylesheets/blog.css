@@ -42,13 +42,18 @@ header.navigation.green a{
   width: 100%;
   color: white;
 }
-.posts-index #title-div{
+.posts-index .title-tile{
   height: 200px;
   width: 250px;
   background: rgba(0,0,0,0.5);
-  color: white;
   font-size: 50px;
   border-radius: 10px;
   text-align: right;
   padding: 11px;
+}
+.posts-index .title-tile h2{
+  color: white;
+}
+.posts-index .image:not(.logo):hover a{
+  cursor: default;
 }

@@ -2,14 +2,14 @@
 <div class="photo-container">
   <div class="photo-inner-container">
     <% @tiles.each do |tile| %>
-      <% if tile === :title_tile %>
-        <div id="title-div" class="image" >
-          <h2> Along the Gringo Trail </h2>
-        </div>
-      <% else %>
-        <div class="image">
-          <%= image_tag tile %>
-        </div>
+      <%= content_tag :div, class: ["image", tile[:class]] do %>
+        <%= link_to tile[:href] do %>
+          <% if tile[:class] == 'title-tile' %>
+            <h2> Along the Gringo Trail </h2>
+          <% else %>
+            <%= image_tag tile[:src] %>
+          <% end %>
+        <% end %>
       <% end %>
     <% end %>
   </div>

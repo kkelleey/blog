@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'maps/index'
 
-  get 'photos/index'
+  resources :maps, only: :index
 
   resources :photos
   namespace :admin do

@@ -10,17 +10,15 @@
 
 #map_canvas {
   height: 800px;
-  width: 40%;
+  width: 100%;
+  border-radius: 15px;
 }
-
 #map_canvas img { 
   max-width: none; // to prevent UI control bug
 }
-
 #map_canvas .content {
   padding: 0 0.5em 1em 0.5em;
 }
-
 #map_canvas .firstHeading {
   font-size: 1em;
   line-height: 1em;
@@ -58,6 +56,29 @@
       }
     }
   }
+}
+#maps-container{
+  @include outer-container;
+}
+#map-canvas-container{
+  @include span-columns(5);
+}
+#maps-container #content-container{
+  @include span-columns(7);
+}
+#the-plan{
+  background: rgba(0,0,0,0.5);
+  color: #FFF;
+  padding: 15px 10px 5px 15px;
+  margin: 5px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#gringo-trail-map{
+  height: 300px;
+  border-radius: 15px;
 }
 .posts-container{
   @include outer-container;

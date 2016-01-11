@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'maps/index'
+
   get 'photos/index'
 
   resources :photos

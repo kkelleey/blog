@@ -9,20 +9,18 @@ header.navigation.green a{
   padding: 10px;
   background-color: #F6F7F9;
 }
-.posts-container{
-  background-color: #FFF;
-  padding: 10px;
-}
 .post-div{
   margin-top: 10px;
 }
 .post-title{
   font-size: 2em;
   margin-bottom: 0.2em;
+  text-align: center;
 }
 .post-date{
   font-size: 90%;
-  color: grey;
+  text-align: center;
+  color: rgba(221, 221, 221, 0.77);
 }
 .photos-index img{
   border-radius: 20px;

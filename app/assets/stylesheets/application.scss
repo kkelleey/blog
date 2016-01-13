@@ -9,7 +9,7 @@
 @import "blog";
 
 #map_canvas {
-  height: 800px;
+  height: 700px;
   width: 100%;
   border-radius: 15px;
 }
@@ -59,6 +59,7 @@
 }
 #maps-container{
   @include outer-container;
+  margin-left: 10%;
 }
 #map-canvas-container{
   @include span-columns(5);
@@ -82,10 +83,15 @@
 }
 .posts-container{
   @include outer-container;
+  padding: 10px;
 }
 .post-div{
-  @include span-columns(8);
-  @include shift(2);
+  @include span-columns(10);
+  @include shift(1);
+  color: #FFF;
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 10px;
 }
 .hero {  
   $base-border-radius: 3px !default;

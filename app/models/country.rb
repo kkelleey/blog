@@ -1,4 +1,7 @@
 class Country < ActiveRecord::Base
+  has_many :posts, through: :cities
+  has_many :cities
+
   has_attached_file :logo,
     styles: {
       thumb: "100x100#",

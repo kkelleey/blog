@@ -1,4 +1,6 @@
 class Post < ActiveRecord::Base
-  belongs_to :country
-  scope :by_country, -> country { where(country: country) }
+  belongs_to :city
+  scope :by_country, -> country do
+    joins(:city).where(cities: { country_id: country })
+  end
 end

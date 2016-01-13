@@ -11,7 +11,7 @@ class PostDashboard < Administrate::BaseDashboard
     id: Field::Number,
     title: Field::String,
     text: Field::Text,
-    country: Field::BelongsTo,
+    city: Field::BelongsTo,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }
@@ -24,7 +24,7 @@ class PostDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :title,
-    :country,
+    :city,
     :created_at,
   ]
 
@@ -36,7 +36,7 @@ class PostDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :country,
+    :city,
     :title,
     :text,
   ]

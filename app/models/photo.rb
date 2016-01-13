@@ -1,5 +1,5 @@
 class Photo < ActiveRecord::Base
-  belongs_to :country
+  belongs_to :city
   has_attached_file :image,
     styles: {
     thumb: "100x100#",

@@ -9,8 +9,7 @@ class PhotoDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    country_id: Field::Number,
-    country: Field::BelongsTo,
+    city: Field::BelongsTo,
     image: PaperclipField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -24,7 +23,7 @@ class PhotoDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :image,
-    :country,
+    :city,
     :created_at,
   ]
 
@@ -36,7 +35,7 @@ class PhotoDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :country_id,
+    :city_id,
     :image_file_name,
   ]
 

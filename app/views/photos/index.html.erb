@@ -2,7 +2,7 @@
   <div class="image">
     <%= image_tag photo.image.url(:small) %>
     <h2>
-      <%= photo.country.name %>
+      <%= photo.city.name %>,<%= photo.city.country.name %>
     <h2>
   </div>
 <% end %>

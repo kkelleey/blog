@@ -10,10 +10,10 @@ module Admin
     # end
 
     def create
-      country_id = params[:photo][:country_id]
+      city_id = params[:photo][:city_id]
       added_photos = 0
       params[:photo][:image].each do |photo|
-        record = Photo.create(photo_params(photo, country_id))
+        record = Photo.create(photo_params(photo, city_id))
         if record.errors.any?
           flash[:notice] = record.errors.full_messages.to_sentence
         else
@@ -34,8 +34,8 @@ module Admin
 
     private
 
-    def photo_params(photo, country_id)
-      { country_id: country_id, image: photo }
+    def photo_params(photo, city_id)
+      { city_id: city_id, image: photo }
     end
 
   end

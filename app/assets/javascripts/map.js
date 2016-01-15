@@ -1,6 +1,6 @@
 $(document).ready(function() {
   var bittersMap = (function () {
-    var myLatlng = new google.maps.LatLng(59.342457, 18.057340),
+    var myLatlng = new google.maps.LatLng(4.694891, -74.132046),
         mapCenter = new google.maps.LatLng(-21, -57),
         mapCanvas = document.getElementById('map_canvas'),
         mapOptions = {
@@ -28,7 +28,7 @@ $(document).ready(function() {
         marker = new google.maps.Marker({
           position: myLatlng,
           map: map,
-          title: 'thoughtbot (Sweden)'
+          title: 'Bogota'
         });
 
     return {

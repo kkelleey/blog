@@ -1,7 +1,7 @@
 class Tile
   def self.generate_tiles(n)
     tiles = [title_tile] + country_logo_tiles
-    tiles += random_photo_tiles(n - tiles.count)
+    # tiles += random_photo_tiles(n - tiles.count)
     tiles.shuffle
   end
 

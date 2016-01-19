@@ -1,6 +1,7 @@
 <div id="maps-container">
-  <div id="map-canvas-container">
-    <div id="map_canvas"></div>
+  <%= content_tag :div, id: 'map-canvas-container', data: {src: maps_path(format: :json) } do %>
+    <%= tag :div, id: "map_canvas"%>
+  <% end %>
   </div>
   <div id="content-container">
     <div id="the-plan">

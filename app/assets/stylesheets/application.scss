@@ -62,10 +62,10 @@
   margin-left: 10%;
 }
 #map-canvas-container{
-  @include span-columns(5);
+  @include span-columns(6);
 }
 #maps-container #content-container{
-  @include span-columns(7);
+  @include span-columns(6);
 }
 #the-plan{
   background: rgba(0,0,0,0.5);

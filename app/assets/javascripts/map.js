@@ -1,7 +1,6 @@
 $(document).ready(function() {
   var bittersMap = (function () {
-    var myLatlng = new google.maps.LatLng(4.694891, -74.132046),
-        mapCenter = new google.maps.LatLng(-21, -57),
+      var mapCenter = new google.maps.LatLng(-16, -57),
         mapCanvas = document.getElementById('map_canvas'),
         mapOptions = {
           center: mapCenter,
@@ -12,25 +11,23 @@ $(document).ready(function() {
           mapTypeId: google.maps.MapTypeId.ROADMAP
         },
         map = new google.maps.Map(mapCanvas, mapOptions),
-        contentString =
-          '<div id="content">'+
-          '<div id="siteNotice">'+
-          '</div>'+
-          '<h1 id="firstHeading" class="firstHeading">thoughtbot</h1>'+
-          '<div id="bodyContent"'+
-          '<p>Sveavägen 98</p>'+
-          '</div>'+
-          '</div>',
-        infowindow = new google.maps.InfoWindow({
-          content: contentString,
-          maxWidth: 300
-        }),
-        marker = new google.maps.Marker({
-          position: myLatlng,
-          map: map,
-          title: 'Bogota'
+        url = $('#map_canvas').data('src');
+        $.getJSON(url, function(cities) {
+          $.each(cities, function(index, city) {
+            var marker = new google.maps.Marker({
+              position: { lat: city.lat, lng: city.longitude },
+              map: map,
+              title: city.name,
+            });
+            var infowindow = new google.maps.InfoWindow({
+              content: '<h1>' + city.name + '</h1>',
+              maxWidth: 300,
+            })
+            google.maps.event.addListener(marker, 'click', function () {
+              infowindow.open(map,marker);
+            });
+          });
         });
-
     return {
       init: function () {
         map.set('styles', [{
@@ -43,9 +40,6 @@ $(document).ready(function() {
           ]}
         ]);
 
-        google.maps.event.addListener(marker, 'click', function () {
-          infowindow.open(map,marker);
-        });
       }
     };
   }());

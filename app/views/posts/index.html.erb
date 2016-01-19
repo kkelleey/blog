@@ -19,7 +19,7 @@
     <div class="post-div">
       <h3 class="post-title"><%= post.title %></h3>
       <p class="post-date"><%= post.created_at.strftime("%B %d, %Y") %></p>
-      <p><%= post.text %></p>
+      <p><%= raw post.text %></p>
     </div>
   <% end %>
 </div>

@@ -3,10 +3,10 @@
   <div class="photo-inner-container">
     <% @tiles.each do |tile| %>
       <%= content_tag :div, class: ["image", tile[:class]] do %>
-        <%= link_to tile[:href] do %>
-          <% if tile[:class] == 'title-tile' %>
-            <h2> Along the Gringo Trail </h2>
-          <% else %>
+        <% if tile[:class] == 'title-tile' %>
+          <h2> Along the Gringo Trail </h2>
+        <% else %>
+          <%= link_to tile[:href] do %>
             <%= image_tag tile[:src] %>
           <% end %>
         <% end %>

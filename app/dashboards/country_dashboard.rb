@@ -11,6 +11,7 @@ class CountryDashboard < Administrate::BaseDashboard
     id: Field::Number,
     name: Field::String,
     logo: PaperclipField,
+    photobucket_url: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }
@@ -22,7 +23,7 @@ class CountryDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :id,
-    :logo,
+    :photobucket_url,
     :name,
     :created_at,
     :updated_at,
@@ -37,7 +38,7 @@ class CountryDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :name,
-    :logo,
+    :photobucket_url,
   ]
 
   # Overwrite this method to customize how countries are displayed

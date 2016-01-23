@@ -18,6 +18,7 @@ $(document).ready(function() {
               position: { lat: city.lat, lng: city.longitude },
               map: map,
               title: city.name,
+              label: (index + 1).toString(),
             });
             var infowindow = new google.maps.InfoWindow({
               content: '<h1>' + city.name + '</h1>',

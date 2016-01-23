@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   has_scope :by_country
+  has_scope :by_city
 
   # GET /posts
   def index

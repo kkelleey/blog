@@ -20,8 +20,9 @@ $(document).ready(function() {
               title: city.name,
               label: (index + 1).toString(),
             });
+            var postsLink = '<a href="' + city.postUrl + '">See post(s)</a>';
             var infowindow = new google.maps.InfoWindow({
-              content: '<h1>' + city.name + '</h1>',
+              content: '<h1>' + city.name + '</h1>' + '<br>' + postsLink,
               maxWidth: 300,
             })
             google.maps.event.addListener(marker, 'click', function () {

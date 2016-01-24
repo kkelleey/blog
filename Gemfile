@@ -4,6 +4,7 @@ ruby "2.3.0"
 
 gem "administrate", "~> 0.1.2"
 gem "autoprefixer-rails"
+gem 'aws-sdk', '~> 2'
 gem "bourbon", "~> 4.2.0"
 gem "coffee-rails", "~> 4.1.0"
 gem "clearance"

@@ -1,5 +1,7 @@
 class Photo < ActiveRecord::Base
   belongs_to :city
+  scope :with_location, -> { includes(:city, city: :country) }
+
   has_attached_file :image,
     styles: {
     thumb: "100x100#",

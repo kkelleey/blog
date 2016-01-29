@@ -20,6 +20,7 @@
       <h3 class="post-title"><%= post.title %></h3>
       <p class="post-date"><%= post.created_at.strftime("%B %d, %Y") %></p>
       <p><%= raw post.text %></p>
+      <p><%= link_to 'See all photos', photos_path(by_city: post.city.id) %>
     </div>
   <% end %>
 </div>

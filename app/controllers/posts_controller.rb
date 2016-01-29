@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = apply_scopes(Post).order(created_at: :desc).first(5)
+    @posts = apply_scopes(Post).with_city.order(created_at: :desc).first(5)
     @tiles = Tile.generate_tiles(10)
   end
 end

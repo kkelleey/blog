@@ -18,7 +18,7 @@ class Tile
   def self.country_logo_tiles
     Country.all.map do |country|
       {
-        src: country.photobucket_url,
+        src: country.logo.url,
         href: Rails.application.routes.url_helpers.posts_path(by_country: country.id),
         class: 'logo',
       }

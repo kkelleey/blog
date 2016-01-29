@@ -76,8 +76,16 @@ header.navigation.green{
       border-radius: 10px;
       height: 350px;
     }
+    a {
+      color: #ddd;
+      font-weight: 800;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   }
 }
+
 .photos-index{
   .image{
     display: inline-block;

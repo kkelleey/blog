@@ -4,5 +4,8 @@ class PhotosController < ApplicationController
 
   def index
     @photos = apply_scopes(Photo).with_location.order(created_at: :desc)
+    if params[:by_city]
+      @city = City.find(params[:by_city])
+    end
   end
 end

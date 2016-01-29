@@ -87,6 +87,15 @@ header.navigation.green{
 }
 
 .photos-index{
+  .header-row span{
+    color: white;
+    background: grey;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: 500;
+    border-radius: 5px;
+  }
+
   .image{
     display: inline-block;
     position: relative;

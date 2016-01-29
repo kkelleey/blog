@@ -1,8 +1,17 @@
+<% if @city.present? %>
+  <div class="header-row">
+    <span>
+      <%= "Photos of #{@city.name}" %>
+    </span>
+  </div>
+<% end %>
 <% @photos.each do |photo| %>
   <div class="image">
     <%= image_tag photo.image.url(:small) %>
-    <h2>
-      <%= photo.city.name %>,<%= photo.city.country.name %>
-    <h2>
+    <% unless @city.present? %>
+      <h2>
+        <%= photo.city.name %>,<%= photo.city.country.name %>
+      <h2>
+    <% end %>
   </div>
 <% end %>

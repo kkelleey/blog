@@ -8,55 +8,6 @@
 @import "refills/flashes";
 @import "blog";
 
-#map_canvas {
-  height: 700px;
-  width: 100%;
-  border-radius: 15px;
-}
-#map_canvas img { 
-  max-width: none; // to prevent UI control bug
-}
-#map_canvas .content {
-  padding: 0 0.5em 1em 0.5em;
-}
-#map_canvas .firstHeading {
-  font-size: 1em;
-  line-height: 1em;
-  font-weight: bold;
-  margin: 0;
-}
-
-#map_canvas #bodyContent p {
-  font-size: 1em;
-  margin: 0;
-}
-.photo-container{
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-}
-.photo-inner-container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  .image{
-    display: inline-block;
-    border-radius: 15px;
-    max-width: 100%;
-    margin: 5px;
-
-    a{
-      border-radius: inherit;
-
-      img{
-        border-radius: inherit;
-        height: 200px;
-        width: 250px;
-      }
-    }
-  }
-}
 #maps-container{
   @include outer-container;
   margin-left: 10%;
@@ -66,20 +17,6 @@
 }
 #maps-container #content-container{
   @include span-columns(6);
-}
-#the-plan{
-  background: rgba(0,0,0,0.5);
-  color: #FFF;
-  padding: 15px 10px 5px 15px;
-  margin: 5px;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-#gringo-trail-map{
-  height: 300px;
-  border-radius: 15px;
 }
 .posts-container{
   @include outer-container;
@@ -93,63 +30,6 @@
   padding: 20px;
   border-radius: 10px;
 }
-.hero {  
-  $base-border-radius: 3px !default;
-  $action-color: #477DCA !default;
-  $large-screen: em(860) !default;
-  $hero-background-top: #7F99BE; 
-  $hero-background-bottom: #20392B;
-  $hero-color: white;
-  $gradient-angle: 10deg;
-  $hero-image: '/assets/machu-picchu.jpg';
-
-  @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
-  background-color: #324766;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 3em;
-
-  .hero-logo img {
-    height: 10em;
-    border: 2px solid #FFF;
-    border-radius: 5px;
-    margin-bottom: 1em;
-  }
-
-  .hero-inner {
-    @include outer-container;
-    @include clearfix;
-    margin: auto;
-    padding: 3.5em;
-    text-align: center;
-
-    .hero-copy {
-      text-align: center;
-      h1 {
-        color: $hero-color;
-        font-size: 1.6em;
-        margin-bottom: 0.5em;
-
-        @include media($large-screen) {
-          font-size: 1.8em;
-        }
-      }
-
-      p {
-        color: $hero-color;
-        line-height: 1.4em;
-        margin: 0 auto 3em auto; 
-
-        @include media($large-screen) {
-          font-size: 1.1em;
-          max-width: 40%;
-        }
-      }
-    }
-  }
-}
-
 
 header.navigation {
   $base-border-color: gainsboro !default;

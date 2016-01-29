@@ -1,0 +1,148 @@
+header.navigation.green{
+  background-color: #66CAC4;
+  border-bottom: #023277;
+
+  a{
+    color: white;
+  }
+}
+.content{
+  padding: 10px;
+  background-color: #F6F7F9;
+}
+.posts-index{
+  .title-tile{
+    height: 200px;
+    width: 250px;
+    background: rgba(0,0,0,0.5);
+    font-size: 49px;
+    border-radius: 10px;
+    text-align: right;
+    padding: 11px;
+
+    h2{
+      color: white;
+    }
+  }
+  .image:not(.logo):hover a{
+    cursor: default;
+  }
+  .photo-container{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+  }
+  .photo-inner-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .image{
+      display: inline-block;
+      border-radius: 15px;
+      max-width: 100%;
+      margin: 5px;
+
+      a{
+        border-radius: inherit;
+
+        img{
+          // border-radius: inherit;
+          height: 200px;
+          width: 250px;
+          margin: 5px;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+  .post-div{
+    margin-top: 10px;
+
+    .post-title{
+      font-size: 2em;
+      margin-bottom: 0.2em;
+      text-align: center;
+    }
+
+    .post-date{
+      font-size: 90%;
+      text-align: center;
+      color: rgba(221, 221, 221, 0.77);
+    }
+
+    img{
+      display: block;
+      border-radius: 10px;
+      height: 350px;
+    }
+  }
+}
+.photos-index{
+  .image{
+    display: inline-block;
+    position: relative;
+    border-radius: 15px;
+    max-width: 100%;
+    margin: 5px;
+
+    img{
+      border-radius: inherit;
+    }
+  }
+
+  .image:not(:hover) h2{
+    display: none;
+  }
+
+  .image:hover h2{
+    position: absolute;
+    color: white;
+    top: 75%;
+    left: 5%;
+    width: 100%;
+  }
+}
+.maps-index{
+  #map_canvas {
+    height: 700px;
+    width: 100%;
+    border-radius: 15px;
+
+    img{
+      max-width: none; // to prevent UI control bug
+    }
+
+    .content{
+      padding: 0 0.5em 1em 0.5em;
+    }
+
+    .firstHeading {
+      font-size: 1em;
+      line-height: 1em;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    #bodyContent p {
+      font-size: 1em;
+      margin: 0;
+    }
+  }
+
+  #the-plan{
+    background: rgba(0,0,0,0.5);
+    color: #FFF;
+    padding: 15px 10px 5px 15px;
+    margin: 5px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #gringo-trail-map{
+    height: 300px;
+    border-radius: 15px;
+  }
+}

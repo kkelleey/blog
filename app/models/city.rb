@@ -9,8 +9,14 @@ class City < ActiveRecord::Base
         name: city.name,
         lat: city.latitude,
         longitude: city.longitude,
-        postUrl: Rails.application.routes.url_helpers.posts_path(by_city: city.id),
+        postUrl: city.post_url
       }
+    end
+  end
+
+  def post_url
+    if posts.present?
+      Rails.application.routes.url_helpers.posts_path(by_city: id)
     end
   end
 end

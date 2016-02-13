@@ -20,7 +20,11 @@ $(document).ready(function() {
               title: city.name,
               // label: (index + 1).toString(),
             });
-            var postsLink = '<a href="' + city.postUrl + '">See post(s)</a>';
+            if (city.postUrl) {
+              var postsLink = '<a href="' + city.postUrl + '">See post(s)</a>';
+            } else {
+              var postsLink = '<p>There are no posts for ' + city.name + '</p>';
+            }
             var infowindow = new google.maps.InfoWindow({
               content: '<h1>' + city.name + '</h1>' + postsLink,
               maxWidth: 300,

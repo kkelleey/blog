@@ -21,8 +21,10 @@
       <p class="post-date"><%= post.created_at.strftime("%B %d, %Y") %></p>
       <p><%= raw post.text %></p>
       <p>
-        <% link_text = "See all photos from #{post.city.name}" %>
-        <%= link_to link_text, photos_path(by_city: post.city.id) %>
+        <% if post.has_photos %>
+          <% link_text = "See all photos from #{post.city.name}" %>
+          <%= link_to link_text, photos_path(by_city: post.city.id) %>
+        <% end %>
       </p>
     </div>
   <% end %>

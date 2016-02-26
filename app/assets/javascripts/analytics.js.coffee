@@ -1,6 +1,5 @@
-$(document).on 'page:change', ->
-  if window._gaq?
-    _gaq.push ['_trackPageview']
-  else if window.pageTracker?
-    pageTracker._trackPageview()
-
+jQuery ->
+  $(document).on 'page:change', ->
+    if window.ga?
+      ga('set',  'location', location.href.split('#')[0])
+      ga('send', 'pageview', { "title": document.title })

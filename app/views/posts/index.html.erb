@@ -22,8 +22,8 @@
       <p><%= raw post.text %></p>
       <p>
         <% if post.has_photos %>
-          <% link_text = "See all photos from #{post.city.name}" %>
-          <%= link_to link_text, photos_path(by_city: post.city.id) %>
+          <% link_text = "See all photos from #{post.name}" %>
+          <%= link_to link_text, photos_path(by_city: post.city_id) %>
         <% end %>
       </p>
     </div>

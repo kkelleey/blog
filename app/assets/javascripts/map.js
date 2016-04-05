@@ -4,7 +4,7 @@ $(document).ready(function() {
         mapCanvas = document.getElementById('map_canvas'),
         mapOptions = {
           center: mapCenter,
-          zoom: 4,
+          zoom: 3,
           scrollwheel: true,
           draggable: true,
           disableDefaultUI: true,

@@ -1,9 +1,9 @@
 class Photo < ActiveRecord::Base
-  belongs_to :city
+  belongs_to :city, counter_cache: true
   scope :with_location, -> { includes(:city, city: :country) }
-  scope :by_country, lambda do |country|
+  scope :by_country, (lambda do |country|
     joins(:city).where(cities: { country_id: country })
-  end
+  end)
   scope :by_city, -> (city) { where(city: city) }
 
   has_attached_file :image,

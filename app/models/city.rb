@@ -15,7 +15,7 @@ class City < ActiveRecord::Base
   end
 
   def post_url
-    if posts.present?
+    if posts_count > 0
       Rails.application.routes.url_helpers.posts_path(by_city: id)
     end
   end

@@ -5,8 +5,7 @@ class PostsController < ApplicationController
   # GET /posts
   def index
     @posts = apply_scopes(Post)
-             .with_city
-             .with_photos_boolean
+             .with_location
              .order(created_at: :desc).first(5)
     @tiles = Tile.generate_tiles(10)
   end

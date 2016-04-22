@@ -1,9 +1,9 @@
 class Post < ActiveRecord::Base
   belongs_to :city, counter_cache: true
-  scope :by_country, -> country do
+  scope :by_country, lambda do |country|
     joins(:city).where(cities: { country_id: country })
   end
-  scope :by_city, -> city { where(city: city) }
+  scope :by_city, -> (city) { where(city: city) }
 
   def self.with_city
     joins(:city)

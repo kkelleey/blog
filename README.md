@@ -1,4 +1,11 @@
-# Blog
+# Gringo Trail Blog
+
+In 2016 I quit my job to backpack South America for three months. I built a
+blog in rails to share my experiences with family and friends. I used this as an
+opportunity to work with new gems such as Administrate. Right now some of the
+pieces are hard-coded to data that is specific to me/my trip, such as the name
+of the blog and the 'plan' section on the maps page, but this code could
+theoretically be reused for another travel blog.
 
 ## Getting Started
 
@@ -17,12 +24,3 @@ After setting up, you can run the application using [Heroku Local]:
     % heroku local
 
 [Heroku Local]: https://devcenter.heroku.com/articles/heroku-local
-
-## Guidelines
-
-Use the following guides for getting things done, programming well, and
-programming in style.
-
-* [Protocol](http://github.com/thoughtbot/guides/blob/master/protocol)
-* [Best Practices](http://github.com/thoughtbot/guides/blob/master/best-practices)
-* [Style](http://github.com/thoughtbot/guides/blob/master/style)

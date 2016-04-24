@@ -12,22 +12,24 @@ RSpec.feature 'UserVisitsPostsPages', type: :feature do
 
   describe 'when user visits posts page and post has no photos' do
     it "does not display 'See all photos from CityWithoutPhotos'" do
-      city = FactoryGirl.create :city, name: 'CityWithoutPhotos'
-      FactoryGirl.create :post, city_id: city.id
+      city = FactoryGirl.create :city_with_no_photos, name: 'CityWithNoPhotos'
+      post = FactoryGirl.create :post, city_id: city.id
       visit posts_path
 
+      expect(page).to have_css 'h3.post-title', text: post.title
       expect(page).not_to have_content('See all photos from CityWithoutPhotos')
     end
   end
 
   describe 'when user visits posts page and post has photos' do
     it "displays 'See all photos from CityWithPhotos'" do
-      city = FactoryGirl.create :city, name: 'CityWithPhotos'
+      city = FactoryGirl.create :city_with_photos, name: 'CityWithPhotos'
       FactoryGirl.create :post, city_id: city.id
-      FactoryGirl.create :photo, city_id: city.id
       visit posts_path
 
-      expect(page).to have_content('See all photos from CityWithPhotos')
+      expect(page).to have_link(
+        'See all photos from CityWithPhotos', href: "/photos?by_city=#{city.id}"
+      )
     end
   end
 end

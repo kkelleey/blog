@@ -3,20 +3,31 @@ FactoryGirl.define do
     latitude 1.5
     longitude 1.5
     country
+
+    trait :with_no_photos do
+      photos_count 0
+    end
+
+    trait :with_photos do
+      photos_count 10
+    end
+
+    factory :city_with_no_photos, traits: [:with_no_photos]
+    factory :city_with_photos, traits: [:with_photos]
   end
   factory :photo do
     sequence(:city_id)
   end
   factory :country do
-    name "MyString"
+    name 'MyString'
   end
   factory :user do
-    name "MyString"
-    password "MyString"
+    name 'MyString'
+    password 'MyString'
   end
   factory :post do
     sequence(:title) { |n| "Post #{n}" }
-    text "MyText"
+    text 'MyText'
     city
   end
 end

@@ -2,16 +2,16 @@ require 'rails_helper'
 require 'support/features/clearance_helpers'
 
 feature 'Visitor signs in' do
-  pending 'with valid email and password' do
+  scenario 'with valid email and password' do
     create_user 'user@example.com', 'password'
     sign_in_with 'user@example.com', 'password'
 
     expect_user_to_be_signed_in
   end
 
-  pending 'with valid mixed-case email and password ' do
+  scenario 'with valid mixed-case email and password ' do
     create_user 'user.name@example.com', 'password'
-    sign_in_with 'User.Name@example.com', 'password'
+    sign_in_with 'user.Name@example.com', 'password'
 
     expect_user_to_be_signed_in
   end

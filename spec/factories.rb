@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :city do
+    sequence(:name) { |n| "City_#{n}" }
     latitude 1.5
     longitude 1.5
     country
@@ -23,6 +24,7 @@ FactoryGirl.define do
   end
   factory :user do
     name 'MyString'
+    email 'email@example.com'
     password 'MyString'
   end
   factory :post do

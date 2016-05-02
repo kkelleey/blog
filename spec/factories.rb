@@ -15,6 +15,15 @@ FactoryGirl.define do
 
     factory :city_with_no_photos, traits: [:with_no_photos]
     factory :city_with_photos, traits: [:with_photos]
+
+    factory :city_with_a_photo do
+      after(:create) { |city| city.photos << create(:photo) }
+    end
+
+    factory :city_with_a_photo_and_post do
+      after(:create) { |city| city.photos << create(:photo) }
+      after(:create) { |city| city.posts << create(:post) }
+    end
   end
   factory :photo do
     image { File.new("#{Rails.root}/spec/support/fixtures/image.jpg") }
@@ -32,8 +41,4 @@ FactoryGirl.define do
     text 'MyText'
     city
   end
-end
-
-def test_img_path
-  Rails.root.join('/spec/fixtures/test_img.png')
 end

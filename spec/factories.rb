@@ -17,7 +17,7 @@ FactoryGirl.define do
     factory :city_with_photos, traits: [:with_photos]
   end
   factory :photo do
-    sequence(:city_id)
+    image { File.new("#{Rails.root}/spec/support/fixtures/image.jpg") }
   end
   factory :country do
     name 'MyString'
@@ -32,4 +32,8 @@ FactoryGirl.define do
     text 'MyText'
     city
   end
+end
+
+def test_img_path
+  Rails.root.join('/spec/fixtures/test_img.png')
 end

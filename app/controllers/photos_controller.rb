@@ -1,5 +1,4 @@
 class PhotosController < ApplicationController
-  has_scope :by_country
   has_scope :by_city
 
   def index

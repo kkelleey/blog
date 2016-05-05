@@ -7,6 +7,6 @@ class PostsController < ApplicationController
     @posts = apply_scopes(Post)
              .with_location
              .order(created_at: :desc).first(5)
-    @tiles = Tile.generate_tiles(10)
+    @tiles = TileList.new.tiles
   end
 end

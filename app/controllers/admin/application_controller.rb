@@ -6,10 +6,13 @@
 # you're free to overwrite the RESTful controller actions.
 module Admin
   class ApplicationController < Administrate::ApplicationController
+    include Clearance::Controller
+    include Clearance::Authentication
+
     before_filter :authenticate_admin
 
     def authenticate_admin
-      # TODO Add authentication logic here.
+      signed_in?
     end
 
     # Override this value to specify the number of elements to display at a time

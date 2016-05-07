@@ -1,3 +1,5 @@
+<%= javascript_include_tag 'map' %>
+
 <div id="maps-container">
   <%= content_tag :div, id: 'map-canvas-container', data: {src: maps_path(format: :json) } do %>
     <%= tag :div, id: "map_canvas"%>

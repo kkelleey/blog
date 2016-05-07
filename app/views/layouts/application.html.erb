@@ -15,11 +15,11 @@
   <%= render "layouts/google_analytics" %>
 </head>
 <body class="<%= body_class %>">
+  <%= render "javascript" %>
   <%= render "navbar" %>
   <div class="content">
     <%= render "flashes" -%>
     <%= yield %>
   </div>
-  <%= render "javascript" %>
 </body>
 </html>

@@ -20,6 +20,7 @@ class TileList
     Country.all.map do |country|
       {
         src: country.logo.url,
+        country_name: country.name,
         href: posts_path_for(country),
         class: 'logo'
       }

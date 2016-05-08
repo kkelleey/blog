@@ -7,7 +7,7 @@
           <h2> Along the Gringo Trail </h2>
         <% else %>
           <%= link_to tile[:href] do %>
-            <%= image_tag tile[:src] %>
+            <%= image_tag tile[:src], title: "See all posts from #{tile[:country_name]}" %>
           <% end %>
         <% end %>
       <% end %>

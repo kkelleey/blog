@@ -23,7 +23,8 @@ module Blog
     end
     config.action_controller.action_on_unpermitted_parameters = :raise
     config.active_record.raise_in_transactional_callbacks = true
+    config.action_controller.include_all_helpers = false
     config.active_job.queue_adapter = :delayed_job
-    config.autoload_paths << Rails.root.join('facades') 
+    config.autoload_paths << Rails.root.join('facades')
   end
 end

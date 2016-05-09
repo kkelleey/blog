@@ -1,8 +1,8 @@
 require 'rails_helper'
+require 'support/features/admin_helpers'
 
 RSpec.feature "AdminNavigatesToCityShows", type: :feature do
   it 'shows the city latitude and longitude' do
-    admin = create :user
     city = create :city
     visit admin_cities_path(as: admin)
     click_on_row_for(city)

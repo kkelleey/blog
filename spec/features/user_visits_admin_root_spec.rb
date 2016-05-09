@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.feature 'AdminVisitsAdminRoots', type: :feature do
   scenario 'signed in' do
-    admin = create :user
     visit admin_root_path(as: admin)
 
     expect(page).to have_css('h1', text: 'Posts')

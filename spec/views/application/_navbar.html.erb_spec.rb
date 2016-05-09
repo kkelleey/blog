@@ -9,6 +9,7 @@ RSpec.describe 'application/_navbar', type: :view do
       render
 
       expect(rendered).to link_to_admin?
+      expect(rendered).to link_to_logout?
     end
   end
 
@@ -19,12 +20,17 @@ RSpec.describe 'application/_navbar', type: :view do
       render
 
       expect(rendered).not_to link_to_admin?
+      expect(rendered).not_to link_to_logout?
     end
   end
 end
 
 def link_to_admin?
   have_link('Admin', admin_root_path)
+end
+
+def link_to_logout?
+  have_link('Log out', sign_out_path)
 end
 
 def assign_post_and_titles

@@ -7,6 +7,10 @@ module Features
     def expect_page_to_have_header(header)
       expect(page).to have_css('h1', text: header)
     end
+
+    def click_on_row_for(resource_name)
+      find('td', text: resource_name).click
+    end
   end
 end
 

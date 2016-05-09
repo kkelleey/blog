@@ -3,6 +3,10 @@ module Features
     def admin
       create :user
     end
+
+    def expect_page_to_have_header(header)
+      expect(page).to have_css('h1', text: header)
+    end
   end
 end
 

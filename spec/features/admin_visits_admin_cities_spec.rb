@@ -5,6 +5,6 @@ RSpec.feature 'AdminVisitsAdminCities', type: :feature do
   it 'displays a Cities header' do
     visit admin_cities_path(as: admin)
 
-    expect(page).to have_css('h1', text: 'Cities')
+    expect_page_to_have_header 'Cities'
   end
 end

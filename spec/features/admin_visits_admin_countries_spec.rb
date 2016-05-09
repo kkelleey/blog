@@ -4,6 +4,6 @@ RSpec.feature 'AdminVisitsAdminCountries', type: :feature do
   it 'displays Countries header' do
     visit admin_countries_path(as: admin)
 
-    expect(page).to have_css('h1', text: 'Countries')
+    expect_page_to_have_header 'Countries'
   end
 end

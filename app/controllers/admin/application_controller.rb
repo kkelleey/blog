@@ -11,8 +11,15 @@ module Admin
 
     before_filter :authenticate_admin
 
+    private
+
     def authenticate_admin
-      signed_in?
+      deny_access unless signed_in?
+    end
+
+    def deny_access
+      flash[:error] = 'You do not have access to that page.'
+      redirect_to root_path
     end
 
     # Override this value to specify the number of elements to display at a time

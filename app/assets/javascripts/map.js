@@ -1,10 +1,13 @@
 $(document).ready(function() {
   var bittersMap = (function () {
-      var mapCenter = new google.maps.LatLng(-16, -57),
+    var configData = $('#map-canvas-container').data();
+      var mapCenter = new google
+        .maps
+        .LatLng(configData.latitude, configData.longitude),
         mapCanvas = document.getElementById('map_canvas'),
         mapOptions = {
           center: mapCenter,
-          zoom: 3,
+          zoom: configData.zoom,
           scrollwheel: true,
           draggable: true,
           disableDefaultUI: true,

@@ -26,5 +26,6 @@ module Blog
     config.action_controller.include_all_helpers = false
     config.active_job.queue_adapter = :delayed_job
     config.autoload_paths << Rails.root.join('facades')
+    config.site_information = config_for(:site_information)
   end
 end

@@ -9,7 +9,7 @@
     config/locales/en.yml. For more see:
     https://github.com/calebthompson/title#usage
   %>
-  <title>Along the Gringo Trail</title>
+  <title><%= Rails.configuration.site_information['site_name'] %></title>
   <%= stylesheet_link_tag :application, media: "all" %>
   <%= csrf_meta_tags %>
   <%= render "layouts/google_analytics" %>

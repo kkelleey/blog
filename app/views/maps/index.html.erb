@@ -1,23 +1,17 @@
 <%= javascript_include_tag 'map' %>
 
 <div id="maps-container">
-  <%= content_tag :div, id: 'map-canvas-container', data: {src: maps_path(format: :json) } do %>
+  <%= content_tag :div, id: 'map-canvas-container',
+    data: map_data do %>
     <%= tag :div, id: "map_canvas"%>
   <% end %>
   </div>
   <div id="content-container">
     <div id="the-plan">
       <h3>The Plan</h3>
+      <%= Rails.configuration.site_information['map']['plan'] %>
       <p>
-      I'm starting in Bogota and plan on working my way south from there. My
-      mom is meeting me in Lima in mid-Febrary and we're going to travel Peru for
-      a few weeks.  After that, I'll continue on to Bolivia. Below is a map of 
-      one version of the Gringo Trail, which is a sequence of places that backpackers 
-      tend to visit.  I'm not sure I'll make it as far south as that route goes and I might not
-      make it all the way to Rio. I'll probably purchase a return ticket after two
-      or three months.
       </p>
-      <%= image_tag '/assets/gringo-trail.jpg', id: "gringo-trail-map" %>
     </div>
   </div>
 </div>

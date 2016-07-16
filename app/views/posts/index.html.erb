@@ -4,7 +4,7 @@
     <% @tiles.each do |tile| %>
       <%= content_tag :div, class: ["image", tile[:class]] do %>
         <% if tile[:class] == 'title-tile' %>
-          <h2> Along the Gringo Trail </h2>
+          <h2><%= Rails.configuration.site_information['site_name'] %></h2>
         <% else %>
           <%= link_to tile[:href] do %>
             <%= logo_image_tag(tile) %>
